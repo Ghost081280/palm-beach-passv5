@@ -1,13 +1,15 @@
 /* styles.css */
-/* Palm Beach Pass - Main Styles with Your Custom Color Palette */
+/* Palm Beach Pass - Vibrant Tropical Beach Colors */
 
 :root {
-    /* Your Custom Color Palette */
-    --palm-green: #526a5d;        /* Deep sage green */
-    --ocean-blue: #156da1;        /* Ocean blue */
-    --sand: #c4b48c;              /* Sandy beige/tan */
-    --coral: #FF6B6B;
-    --gold: #D4AF37;
+    /* Your New Tropical Beach Palette */
+    --palm-green: #2E8B57;           /* Emerald green */
+    --ocean-blue: #1E90FF;           /* Bright vibrant blue */
+    --sand: #FFD700;                 /* Sunny yellow */
+    --coral: #FF4757;                /* Coral pink/red */
+    --coral-light: #FF6B7A;          /* Lighter coral */
+    
+    /* Supporting colors */
     --white: #FFFFFF;
     --text-dark: #1A1A1A;
     --text-light: #666666;
@@ -25,7 +27,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #c4b48c 0%, #FFFFFF 100%);
+    background: linear-gradient(135deg, var(--sand) 0%, #FFFFFF 100%);
     min-height: 100vh;
     color: var(--text-dark);
     line-height: 1.6;
@@ -64,7 +66,7 @@ body {
 .logo-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #526a5d, #156da1);
+    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -80,7 +82,7 @@ body {
 }
 
 .logo-text span {
-    color: #526a5d;
+    color: var(--palm-green);
 }
 
 .nav-links {
@@ -95,13 +97,19 @@ body {
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.3s;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
 }
 
 .nav-link:hover {
-    color: #156da1;
-    background: #c4b48c;
+    color: var(--ocean-blue);
+    background: var(--sand);
+}
+
+.nav-link.active {
+    color: var(--palm-green);
+    background: rgba(46, 139, 87, 0.1);
+    font-weight: 600;
 }
 
 .user-menu {
@@ -120,14 +128,14 @@ body {
 }
 
 .cart-icon:hover {
-    background: #c4b48c;
+    background: var(--sand);
 }
 
 .cart-badge {
     position: absolute;
     top: 0;
     right: 0;
-    background: #FF6B6B;
+    background: var(--coral);
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -140,7 +148,7 @@ body {
 }
 
 .btn-login {
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -153,7 +161,7 @@ body {
 }
 
 .btn-login:hover {
-    background: #156da1;
+    background: var(--ocean-blue);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -162,7 +170,7 @@ body {
 .hero {
     position: relative;
     min-height: 70vh;
-    background: linear-gradient(135deg, rgba(82,106,93,0.9), rgba(21,109,161,0.9));
+    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,6 +201,7 @@ body {
     z-index: 2;
     max-width: 800px;
     animation: fadeInUp 1s ease-out;
+    margin: 0 auto;
 }
 
 @keyframes fadeInUp {
@@ -214,7 +223,7 @@ body {
 }
 
 .hero h1 span {
-    color: #c4b48c;
+    color: var(--sand);
 }
 
 .hero p {
@@ -229,10 +238,11 @@ body {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .btn-primary {
-    background: #c4b48c;
+    background: var(--sand);
     color: var(--text-dark);
     border: none;
     padding: 1rem 3rem;
@@ -244,12 +254,15 @@ body {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(196,180,140,0.3);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+    background: var(--coral);
+    color: white;
 }
 
 .btn-secondary {
@@ -263,11 +276,14 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-secondary:hover {
     background: white;
-    color: #156da1;
+    color: var(--ocean-blue);
 }
 
 /* Sections */
@@ -281,7 +297,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #526a5d;
+    color: var(--palm-green);
 }
 
 .section-header p {
@@ -303,6 +319,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    justify-items: center;
 }
 
 .pass-card {
@@ -314,19 +331,21 @@ body {
     cursor: pointer;
     position: relative;
     border: 3px solid transparent;
+    width: 100%;
+    max-width: 350px;
 }
 
 .pass-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
-    border-color: #526a5d;
+    border-color: var(--palm-green);
 }
 
 .pass-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #FF6B6B;
+    background: var(--coral);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -336,7 +355,7 @@ body {
 }
 
 .pass-header {
-    background: linear-gradient(135deg, #526a5d, #156da1);
+    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
     padding: 2rem;
     color: white;
     text-align: center;
@@ -355,13 +374,15 @@ body {
 
 .pass-body {
     padding: 2rem;
+    text-align: center;
 }
 
 .pass-price {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 1.5rem;
-    background: #c4b48c;
+    background: var(--sand);
     padding: 1rem;
     border-radius: 15px;
 }
@@ -379,12 +400,13 @@ body {
 .price-value {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #526a5d;
+    color: var(--palm-green);
 }
 
 .pass-features {
     list-style: none;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .pass-features li {
@@ -397,7 +419,7 @@ body {
 
 .pass-features li:before {
     content: "✓";
-    color: var(--success);
+    color: var(--coral);
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -408,7 +430,7 @@ body {
 
 .btn-select-pass {
     width: 100%;
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
     border: none;
     padding: 1rem;
@@ -417,10 +439,12 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    margin: 0 auto;
+    display: block;
 }
 
 .btn-select-pass:hover {
-    background: #156da1;
+    background: var(--ocean-blue);
     transform: translateY(-2px);
 }
 
@@ -431,7 +455,7 @@ body {
 }
 
 .attractions-promo {
-    background: linear-gradient(135deg, #526a5d 0%, #156da1 100%);
+    background: linear-gradient(135deg, var(--palm-green) 0%, var(--ocean-blue) 100%);
     color: white;
     padding: 3rem 2rem;
     text-align: center;
@@ -467,7 +491,7 @@ body {
 .promo-subtitle {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #c4b48c;
+    color: var(--sand);
     font-weight: 600;
 }
 
@@ -494,7 +518,7 @@ body {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #c4b48c;
+    color: var(--sand);
     display: block;
 }
 
@@ -512,7 +536,7 @@ body {
 .map-container {
     position: relative;
     height: 500px;
-    background: #f5f5f5;
+    background: var(--ocean-blue);
 }
 
 .map-fallback {
@@ -520,7 +544,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #c4b48c, #e8f5e8);
+    background: linear-gradient(135deg, var(--sand), var(--palm-green));
 }
 
 .fallback-content {
@@ -529,7 +553,7 @@ body {
 }
 
 .fallback-content h3 {
-    color: #526a5d;
+    color: var(--palm-green);
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
@@ -537,7 +561,7 @@ body {
 .map-filters {
     background: white;
     padding: 1rem 2rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--sand);
     position: sticky;
     top: 70px;
     z-index: 50;
@@ -554,7 +578,7 @@ body {
 
 .filter-tab {
     background: white;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--sand);
     padding: 0.5rem 1rem;
     border-radius: 25px;
     cursor: pointer;
@@ -565,13 +589,14 @@ body {
 }
 
 .filter-tab:hover {
-    border-color: #156da1;
+    border-color: var(--ocean-blue);
+    background: var(--sand);
 }
 
 .filter-tab.active {
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
-    border-color: #526a5d;
+    border-color: var(--palm-green);
 }
 
 /* Attractions Container */
@@ -590,12 +615,12 @@ body {
 
 .attractions-header h3 {
     font-size: 1.8rem;
-    color: #526a5d;
+    color: var(--palm-green);
     font-weight: 700;
 }
 
 .btn-view-all {
-    background: #156da1;
+    background: var(--ocean-blue);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -606,7 +631,7 @@ body {
 }
 
 .btn-view-all:hover {
-    background: #526a5d;
+    background: var(--coral);
     transform: translateY(-2px);
 }
 
@@ -615,6 +640,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    justify-items: center;
 }
 
 .attraction-card {
@@ -625,11 +651,14 @@ body {
     transition: all 0.3s;
     cursor: pointer;
     border: 1px solid #f0f0f0;
+    width: 100%;
+    max-width: 350px;
 }
 
 .attraction-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--palm-green);
 }
 
 .attraction-image {
@@ -653,13 +682,14 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     backdrop-filter: blur(10px);
+    color: var(--palm-green);
 }
 
 .free-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--success);
+    background: var(--coral);
     color: white;
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
@@ -669,6 +699,7 @@ body {
 
 .attraction-info {
     padding: 1.5rem;
+    text-align: center;
 }
 
 .attraction-info h3 {
@@ -682,6 +713,7 @@ body {
 .price-row {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 0.75rem;
 }
@@ -706,7 +738,7 @@ body {
 /* How It Works */
 .how-it-works {
     padding: 5rem 2rem;
-    background: #c4b48c;
+    background: var(--sand);
 }
 
 .steps-grid {
@@ -725,11 +757,13 @@ body {
     box-shadow: var(--shadow);
     transition: all 0.3s;
     position: relative;
+    border: 2px solid transparent;
 }
 
 .step-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--palm-green);
 }
 
 .step-icon {
@@ -741,7 +775,7 @@ body {
     position: absolute;
     top: -15px;
     right: 20px;
-    background: #FF6B6B;
+    background: var(--coral);
     color: white;
     width: 30px;
     height: 30px;
@@ -756,7 +790,7 @@ body {
 .step-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #526a5d;
+    color: var(--palm-green);
 }
 
 .step-card p {
@@ -766,7 +800,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
     padding: 3rem 2rem 1rem;
     margin-top: 2rem;
@@ -785,6 +819,7 @@ body {
     margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1.1rem;
+    color: var(--sand);
 }
 
 .footer-section p {
@@ -809,6 +844,7 @@ body {
 
 .footer-links a:hover {
     opacity: 1;
+    color: var(--sand);
 }
 
 .footer-bottom {
@@ -847,6 +883,7 @@ body {
     animation: modalSlideIn 0.3s ease-out;
     max-height: 90vh;
     overflow-y: auto;
+    margin: 0 auto;
 }
 
 @keyframes modalSlideIn {
@@ -879,11 +916,11 @@ body {
 }
 
 .modal-close:hover {
-    background: #c4b48c;
+    background: var(--sand);
 }
 
 .modal h2 {
-    color: #526a5d;
+    color: var(--palm-green);
     margin-bottom: 2rem;
     font-weight: 700;
     font-size: 1.8rem;
@@ -901,25 +938,27 @@ body {
     font-weight: 500;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--sand);
     border-radius: 15px;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
     outline: none;
-    border-color: #156da1;
-    box-shadow: 0 0 0 3px rgba(21,109,161,0.1);
+    border-color: var(--ocean-blue);
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
 }
 
 .btn-submit {
     width: 100%;
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
     border: none;
     padding: 1rem;
@@ -938,7 +977,7 @@ body {
 }
 
 .btn-submit:hover {
-    background: #156da1;
+    background: var(--ocean-blue);
     transform: translateY(-2px);
 }
 
@@ -956,9 +995,13 @@ body {
 }
 
 .form-footer a {
-    color: #156da1;
+    color: var(--ocean-blue);
     text-decoration: none;
     font-weight: 500;
+}
+
+.form-footer a:hover {
+    color: var(--coral);
 }
 
 /* Install Banner */
@@ -967,11 +1010,12 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
     padding: 1rem;
     display: none;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     box-shadow: var(--shadow-lg);
     z-index: 1000;
@@ -986,6 +1030,7 @@ body {
     align-items: center;
     gap: 1rem;
     flex: 1;
+    justify-content: center;
 }
 
 .install-icon {
@@ -1009,8 +1054,8 @@ body {
 }
 
 .btn-install {
-    background: white;
-    color: #526a5d;
+    background: var(--sand);
+    color: var(--text-dark);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -1021,6 +1066,8 @@ body {
 
 .btn-install:hover {
     transform: scale(1.05);
+    background: var(--coral);
+    color: white;
 }
 
 .btn-dismiss {
@@ -1057,7 +1104,7 @@ body {
     position: fixed;
     top: 100px;
     right: 2rem;
-    background: var(--success);
+    background: var(--coral);
     color: white;
     padding: 1rem 2rem;
     border-radius: 10px;
@@ -1065,14 +1112,23 @@ body {
     z-index: 3000;
     animation: slideInRight 0.3s ease-out;
     max-width: 300px;
+    text-align: center;
 }
 
 .toast.error {
-    background: #FF6B6B;
+    background: var(--coral);
 }
 
 .toast.warning {
     background: var(--warning);
+}
+
+.toast.success {
+    background: var(--success);
+}
+
+.toast.info {
+    background: var(--ocean-blue);
 }
 
 @keyframes slideInRight {
@@ -1092,7 +1148,7 @@ body {
 }
 
 .info-window-header {
-    background: linear-gradient(135deg, #526a5d, #156da1);
+    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
     color: white;
     padding: 1rem;
     margin: -1rem -1rem 1rem -1rem;
@@ -1124,6 +1180,7 @@ body {
 .info-window-price {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -1135,7 +1192,7 @@ body {
 }
 
 .info-window-free {
-    background: var(--success);
+    background: var(--coral);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
@@ -1148,12 +1205,13 @@ body {
     gap: 0.5rem;
     margin: 1rem -1rem -1rem -1rem;
     padding: 1rem;
-    background: #c4b48c;
+    background: var(--sand);
+    justify-content: center;
 }
 
 .btn-info-action {
     flex: 1;
-    background: #526a5d;
+    background: var(--palm-green);
     color: white;
     border: none;
     padding: 0.5rem;
@@ -1165,7 +1223,7 @@ body {
 }
 
 .btn-info-action:hover {
-    background: #156da1;
+    background: var(--ocean-blue);
 }
 
 /* Responsive Design */
@@ -1176,6 +1234,7 @@ body {
     
     .nav-content {
         padding: 1rem;
+        justify-content: space-between;
     }
 
     .hero h1 {
@@ -1189,6 +1248,7 @@ body {
     .hero-cta {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
 
     .btn-primary,
@@ -1225,7 +1285,8 @@ body {
     .attractions-header {
         flex-direction: column;
         gap: 1rem;
-        align-items: stretch;
+        align-items: center;
+        text-align: center;
     }
 
     .steps-grid {
@@ -1246,18 +1307,21 @@ body {
 
     .map-filters {
         padding: 1rem;
+        text-align: center;
     }
 
     .toast {
         right: 1rem;
         left: 1rem;
         max-width: none;
+        text-align: center;
     }
 
     .install-banner {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .install-content {
