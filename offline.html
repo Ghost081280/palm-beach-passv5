@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Palm Beach Pass</title>
-    <meta name="theme-color" content="#526a5d">
+    <meta name="theme-color" content="#2E8B57">
     <style>
         :root {
-            --palm-green: #526a5d;
-            --ocean-blue: #156da1;
-            --sand: #c4b48c;
-            --muted-teal: #708d8d;
-            --sky-blue: #5093c8;
-            --coral: #FF6B6B;
-            --gold: #D4AF37;
+            --palm-green: #2E8B57;
+            --ocean-blue: #1E90FF;
+            --sand: #FFD700;
+            --coral: #FF4757;
             --text-dark: #1A1A1A;
             --text-light: #666666;
             --shadow: 0 10px 30px rgba(0,0,0,0.1);
             --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+            --success: #10B981;
+            --warning: #F59E0B;
         }
 
         * {
@@ -49,7 +48,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(82,106,93,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(21,109,161,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(82,106,93,0.1)"/></svg>') repeat;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(46,139,87,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(30,144,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(46,139,87,0.1)"/></svg>') repeat;
             animation: float 30s infinite linear;
             z-index: -1;
         }
@@ -388,9 +387,9 @@
             const toast = document.createElement('div');
             const bgColors = {
                 success: '#10B981',
-                info: '#156da1',
+                info: '#1E90FF',
                 warning: '#F59E0B',
-                error: '#FF6B6B'
+                error: '#FF4757'
             };
             
             toast.style.cssText = `
