@@ -417,7 +417,7 @@ function createOfflinePage() {
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body {
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                background: linear-gradient(135deg, #FAF3E3 0%, #FFFFFF 100%);
+                background: linear-gradient(135deg, #FFD700 0%, #FFFFFF 100%);
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
@@ -430,7 +430,7 @@ function createOfflinePage() {
             .offline-icon {
                 width: 120px;
                 height: 120px;
-                background: linear-gradient(135deg, #2D5016, #006B7D);
+                background: linear-gradient(135deg, #2E8B57, #1E90FF);
                 border-radius: 30px;
                 display: flex;
                 align-items: center;
@@ -441,7 +441,7 @@ function createOfflinePage() {
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             }
             h1 {
-                color: #2D5016;
+                color: #2E8B57;
                 font-size: 2.5rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
@@ -454,7 +454,7 @@ function createOfflinePage() {
                 line-height: 1.6;
             }
             .btn-retry {
-                background: #2D5016;
+                background: #2E8B57;
                 color: white;
                 border: none;
                 padding: 1rem 2.5rem;
@@ -465,9 +465,9 @@ function createOfflinePage() {
                 transition: all 0.3s;
             }
             .btn-retry:hover {
-                background: #006B7D;
+                background: #1E90FF;
                 transform: translateY(-2px);
-                box-shadow: 0 8px 25px rgba(0,107,125,0.3);
+                box-shadow: 0 8px 25px rgba(30,144,255,0.3);
             }
             .available-offline {
                 margin-top: 3rem;
@@ -482,15 +482,15 @@ function createOfflinePage() {
                 display: block;
                 padding: 1rem;
                 margin: 0.5rem 0;
-                background: #FAF3E3;
+                background: #FFD700;
                 border-radius: 15px;
                 text-decoration: none;
-                color: #2D5016;
+                color: #2E8B57;
                 font-weight: 500;
                 transition: all 0.3s;
             }
             .offline-link:hover {
-                background: #2D5016;
+                background: #2E8B57;
                 color: white;
                 transform: translateX(10px);
             }
@@ -506,7 +506,7 @@ function createOfflinePage() {
         </button>
         
         <div class="available-offline">
-            <h3 style="color: #2D5016; margin-bottom: 1rem; font-size: 1.3rem;">Available Offline:</h3>
+            <h3 style="color: #2E8B57; margin-bottom: 1rem; font-size: 1.3rem;">Available Offline:</h3>
             <a href="/" class="offline-link">🏠 Home</a>
             <a href="/customer-account.html" class="offline-link">🎫 My Passes</a>
             <a href="/checkout.html" class="offline-link">🛒 Checkout</a>
@@ -546,11 +546,11 @@ function createOfflineIcon() {
     <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#2D5016"/>
-          <stop offset="100%" style="stop-color:#006B7D"/>
+          <stop offset="0%" style="stop-color:#2E8B57"/>
+          <stop offset="100%" style="stop-color:#1E90FF"/>
         </linearGradient>
       </defs>
-      <rect width="200" height="200" fill="#FAF3E3"/>
+      <rect width="200" height="200" fill="#FFD700"/>
       <circle cx="100" cy="100" r="60" fill="url(#grad)" opacity="0.8"/>
       <text x="100" y="110" text-anchor="middle" fill="white" font-size="60" font-family="system-ui">🌴</text>
       <text x="100" y="150" text-anchor="middle" fill="#666" font-size="12" font-family="system-ui">Offline</text>
