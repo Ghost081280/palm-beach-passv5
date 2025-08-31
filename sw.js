@@ -1,5 +1,5 @@
 // Palm Beach Pass - Service Worker
-// Version 1.0.0
+// Version 1.0.0 - Red-Pink Sightseeing Pass Theme
 
 const CACHE_NAME = 'palm-beach-pass-v1.0.0';
 const DYNAMIC_CACHE = 'palm-beach-pass-dynamic-v1.0.0';
@@ -404,7 +404,7 @@ async function clearCache(cacheType) {
   }
 }
 
-// Offline Fallback Content
+// Offline Fallback Content with Red-Pink Theme
 function createOfflinePage() {
   const offlineHTML = `
     <!DOCTYPE html>
@@ -417,7 +417,7 @@ function createOfflinePage() {
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body {
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                background: linear-gradient(135deg, #FFD700 0%, #FFFFFF 100%);
+                background: linear-gradient(135deg, #FFB6C1 0%, #FFFFFF 100%);
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
@@ -425,12 +425,12 @@ function createOfflinePage() {
                 justify-content: center;
                 text-align: center;
                 padding: 2rem;
-                color: #1A1A1A;
+                color: #2C2C2C;
             }
             .offline-icon {
                 width: 120px;
                 height: 120px;
-                background: linear-gradient(135deg, #2E8B57, #1E90FF);
+                background: linear-gradient(135deg, #FF4757, #E91E63);
                 border-radius: 30px;
                 display: flex;
                 align-items: center;
@@ -438,10 +438,10 @@ function createOfflinePage() {
                 font-size: 4rem;
                 color: white;
                 margin-bottom: 2rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                box-shadow: 0 10px 30px rgba(255, 71, 87, 0.15);
             }
             h1 {
-                color: #2E8B57;
+                color: #FF4757;
                 font-size: 2.5rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
@@ -454,7 +454,7 @@ function createOfflinePage() {
                 line-height: 1.6;
             }
             .btn-retry {
-                background: #2E8B57;
+                background: #FF4757;
                 color: white;
                 border: none;
                 padding: 1rem 2.5rem;
@@ -465,16 +465,16 @@ function createOfflinePage() {
                 transition: all 0.3s;
             }
             .btn-retry:hover {
-                background: #1E90FF;
+                background: #E91E63;
                 transform: translateY(-2px);
-                box-shadow: 0 8px 25px rgba(30,144,255,0.3);
+                box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
             }
             .available-offline {
                 margin-top: 3rem;
                 padding: 2rem;
                 background: white;
                 border-radius: 20px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                box-shadow: 0 4px 15px rgba(255, 71, 87, 0.1);
                 max-width: 400px;
                 width: 100%;
             }
@@ -482,15 +482,15 @@ function createOfflinePage() {
                 display: block;
                 padding: 1rem;
                 margin: 0.5rem 0;
-                background: #FFD700;
+                background: #FFB6C1;
                 border-radius: 15px;
                 text-decoration: none;
-                color: #2E8B57;
+                color: #FF4757;
                 font-weight: 500;
                 transition: all 0.3s;
             }
             .offline-link:hover {
-                background: #2E8B57;
+                background: #FF4757;
                 color: white;
                 transform: translateX(10px);
             }
@@ -506,7 +506,7 @@ function createOfflinePage() {
         </button>
         
         <div class="available-offline">
-            <h3 style="color: #2E8B57; margin-bottom: 1rem; font-size: 1.3rem;">Available Offline:</h3>
+            <h3 style="color: #FF4757; margin-bottom: 1rem; font-size: 1.3rem;">Available Offline:</h3>
             <a href="/" class="offline-link">🏠 Home</a>
             <a href="/customer-account.html" class="offline-link">🎫 My Passes</a>
             <a href="/checkout.html" class="offline-link">🛒 Checkout</a>
@@ -546,11 +546,11 @@ function createOfflineIcon() {
     <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#2E8B57"/>
-          <stop offset="100%" style="stop-color:#1E90FF"/>
+          <stop offset="0%" style="stop-color:#FF4757"/>
+          <stop offset="100%" style="stop-color:#E91E63"/>
         </linearGradient>
       </defs>
-      <rect width="200" height="200" fill="#FFD700"/>
+      <rect width="200" height="200" fill="#FFB6C1"/>
       <circle cx="100" cy="100" r="60" fill="url(#grad)" opacity="0.8"/>
       <text x="100" y="110" text-anchor="middle" fill="white" font-size="60" font-family="system-ui">🌴</text>
       <text x="100" y="150" text-anchor="middle" fill="#666" font-size="12" font-family="system-ui">Offline</text>
@@ -581,4 +581,4 @@ async function checkPassUpdates() {
   }
 }
 
-console.log('🌴 Palm Beach Pass Service Worker v1.0.0 loaded successfully!');
+console.log('🌴 Palm Beach Pass Service Worker v1.0.0 loaded with red-pink theme!');
