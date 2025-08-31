@@ -322,24 +322,33 @@
             color: white;
         }
 
+        /* Fixed Order History Section - Constrain width like other sections */
+        .history-container {
+            max-width: 800px; /* Constrain the table width */
+            overflow-x: auto; /* Allow horizontal scrolling on small screens */
+        }
+
         .history-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 2rem;
+            font-size: 0.9rem; /* Slightly smaller font for better fit */
         }
 
         .history-table th {
             background: #FFB6C1;
-            padding: 1rem;
+            padding: 0.75rem;
             text-align: left;
             font-weight: 600;
             color: #FF4757;
             border-bottom: 2px solid #e0e0e0;
+            white-space: nowrap;
         }
 
         .history-table td {
-            padding: 1rem;
+            padding: 0.75rem;
             border-bottom: 1px solid #f0f0f0;
+            white-space: nowrap;
         }
 
         .history-table tr:hover {
@@ -517,6 +526,36 @@
             color: white;
         }
 
+        /* Fixed "Explore Attractions" button to be more prominent red */
+        .adventure-cta {
+            background: #FFB6C1; 
+            padding: 2rem; 
+            border-radius: 15px; 
+            text-align: center;
+        }
+
+        .adventure-cta .btn-primary {
+            background: #FF4757 !important;
+            color: white !important;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+        }
+
+        .adventure-cta .btn-primary:hover {
+            background: #E91E63 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+        }
+
         @media (max-width: 968px) {
             .account-container {
                 grid-template-columns: 1fr;
@@ -538,11 +577,24 @@
             .pass-actions {
                 grid-template-columns: 1fr;
             }
+
+            .history-container {
+                overflow-x: auto;
+            }
         }
 
         @media (max-width: 480px) {
             .dashboard-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .history-table {
+                font-size: 0.8rem;
+            }
+
+            .history-table th,
+            .history-table td {
+                padding: 0.5rem;
             }
         }
     </style>
@@ -645,10 +697,10 @@
                     </div>
                 </div>
 
-                <div style="background: #FFB6C1; padding: 2rem; border-radius: 15px; text-align: center;">
+                <div class="adventure-cta">
                     <h3 style="color: #FF4757; margin-bottom: 1rem;">🎉 Ready for your next adventure?</h3>
                     <p style="color: var(--text-light); margin-bottom: 1.5rem;">Discover 156+ attractions across Palm Beach County with your passes!</p>
-                    <a href="index.html#attractions" class="btn-primary" style="text-decoration: none;">Explore Attractions</a>
+                    <a href="index.html#attractions" class="btn-primary">Explore Attractions</a>
                 </div>
             </div>
 
@@ -678,20 +730,23 @@
                     <p class="content-subtitle">View your past purchases and receipts</p>
                 </div>
                 
-                <table class="history-table" id="historyTable">
-                    <thead>
-                        <tr>
-                            <th>Order Number</th>
-                            <th>Date</th>
-                            <th>Items</th>
-                            <th>Status</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody id="historyBody">
-                        <!-- History loaded dynamically -->
-                    </tbody>
-                </table>
+                <!-- Constrained history container like other sections -->
+                <div class="history-container">
+                    <table class="history-table" id="historyTable">
+                        <thead>
+                            <tr>
+                                <th>Order Number</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyBody">
+                            <!-- History loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="empty-state" id="historyEmpty" style="display: none;">
                     <div class="empty-icon">📜</div>
