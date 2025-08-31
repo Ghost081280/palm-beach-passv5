@@ -1,22 +1,22 @@
 /* styles.css */
-/* Palm Beach Pass - Vibrant Tropical Beach Colors */
+/* Palm Beach Pass - Red to Pink Sightseeing Pass Color Scheme */
 
 :root {
-    /* Your New Tropical Beach Palette */
-    --palm-green: #2E8B57;           /* Emerald green */
-    --ocean-blue: #1E90FF;           /* Bright vibrant blue */
-    --sand: #FFD700;                 /* Sunny yellow */
-    --coral: #FF4757;                /* Coral pink/red */
-    --coral-light: #FF6B7A;          /* Lighter coral */
+    /* New Red to Pink Palette inspired by Sightseeing Pass */
+    --coral-red: #FF4757;              /* Vibrant coral red */
+    --magenta-pink: #E91E63;           /* Magenta pink */
+    --soft-pink: #FFB6C1;             /* Light pink */
+    --rose-gold: #FF69B4;             /* Hot pink/rose gold */
+    --cream-white: #FFF8F0;           /* Soft cream background */
     
     /* Supporting colors */
     --white: #FFFFFF;
-    --text-dark: #1A1A1A;
+    --text-dark: #2C2C2C;
     --text-light: #666666;
     --success: #10B981;
     --warning: #F59E0B;
-    --shadow: 0 10px 30px rgba(0,0,0,0.1);
-    --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+    --shadow: 0 10px 30px rgba(255, 71, 87, 0.15);
+    --shadow-lg: 0 20px 60px rgba(255, 71, 87, 0.25);
 }
 
 * {
@@ -27,7 +27,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, var(--sand) 0%, #FFFFFF 100%);
+    background: linear-gradient(135deg, var(--cream-white) 0%, #FFFFFF 100%);
     min-height: 100vh;
     color: var(--text-dark);
     line-height: 1.6;
@@ -39,7 +39,7 @@ body {
 .nav-header {
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(20px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 20px rgba(255, 71, 87, 0.12);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -66,7 +66,7 @@ body {
 .logo-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
+    background: linear-gradient(135deg, var(--coral-red), var(--magenta-pink));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@ body {
 }
 
 .logo-text span {
-    color: var(--palm-green);
+    color: var(--coral-red);
 }
 
 .nav-links {
@@ -102,13 +102,13 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--ocean-blue);
-    background: var(--sand);
+    color: var(--magenta-pink);
+    background: var(--soft-pink);
 }
 
 .nav-link.active {
-    color: var(--palm-green);
-    background: rgba(46, 139, 87, 0.1);
+    color: var(--coral-red);
+    background: rgba(255, 71, 87, 0.1);
     font-weight: 600;
 }
 
@@ -128,14 +128,14 @@ body {
 }
 
 .cart-icon:hover {
-    background: var(--sand);
+    background: var(--soft-pink);
 }
 
 .cart-badge {
     position: absolute;
     top: 0;
     right: 0;
-    background: var(--coral);
+    background: var(--coral-red);
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -148,7 +148,7 @@ body {
 }
 
 .btn-login {
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -161,7 +161,7 @@ body {
 }
 
 .btn-login:hover {
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -170,7 +170,7 @@ body {
 .hero {
     position: relative;
     min-height: 70vh;
-    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
+    background: linear-gradient(135deg, var(--coral-red), var(--magenta-pink));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,7 +223,7 @@ body {
 }
 
 .hero h1 span {
-    color: var(--sand);
+    color: var(--soft-pink);
 }
 
 .hero p {
@@ -242,7 +242,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--sand);
+    background: var(--soft-pink);
     color: var(--text-dark);
     border: none;
     padding: 1rem 3rem;
@@ -260,8 +260,8 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
-    background: var(--coral);
+    box-shadow: 0 15px 40px rgba(255, 182, 193, 0.4);
+    background: var(--rose-gold);
     color: white;
 }
 
@@ -283,7 +283,7 @@ body {
 
 .btn-secondary:hover {
     background: white;
-    color: var(--ocean-blue);
+    color: var(--magenta-pink);
 }
 
 /* Sections */
@@ -297,7 +297,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--palm-green);
+    color: var(--coral-red);
 }
 
 .section-header p {
@@ -338,14 +338,14 @@ body {
 .pass-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--palm-green);
+    border-color: var(--coral-red);
 }
 
 .pass-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--coral);
+    background: var(--rose-gold);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -355,7 +355,7 @@ body {
 }
 
 .pass-header {
-    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
+    background: linear-gradient(135deg, var(--coral-red), var(--magenta-pink));
     padding: 2rem;
     color: white;
     text-align: center;
@@ -382,7 +382,7 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 1.5rem;
-    background: var(--sand);
+    background: var(--soft-pink);
     padding: 1rem;
     border-radius: 15px;
 }
@@ -400,7 +400,7 @@ body {
 .price-value {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--palm-green);
+    color: var(--coral-red);
 }
 
 .pass-features {
@@ -419,7 +419,7 @@ body {
 
 .pass-features li:before {
     content: "✓";
-    color: var(--coral);
+    color: var(--rose-gold);
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -430,7 +430,7 @@ body {
 
 .btn-select-pass {
     width: 100%;
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
     border: none;
     padding: 1rem;
@@ -444,7 +444,7 @@ body {
 }
 
 .btn-select-pass:hover {
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
     transform: translateY(-2px);
 }
 
@@ -455,7 +455,7 @@ body {
 }
 
 .attractions-promo {
-    background: linear-gradient(135deg, var(--palm-green) 0%, var(--ocean-blue) 100%);
+    background: linear-gradient(135deg, var(--coral-red) 0%, var(--magenta-pink) 100%);
     color: white;
     padding: 3rem 2rem;
     text-align: center;
@@ -491,7 +491,7 @@ body {
 .promo-subtitle {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--sand);
+    color: var(--soft-pink);
     font-weight: 600;
 }
 
@@ -518,7 +518,7 @@ body {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--sand);
+    color: var(--soft-pink);
     display: block;
 }
 
@@ -536,7 +536,7 @@ body {
 .map-container {
     position: relative;
     height: 500px;
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
 }
 
 .map-fallback {
@@ -544,7 +544,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--sand), var(--palm-green));
+    background: linear-gradient(135deg, var(--soft-pink), var(--coral-red));
 }
 
 .fallback-content {
@@ -553,7 +553,7 @@ body {
 }
 
 .fallback-content h3 {
-    color: var(--palm-green);
+    color: var(--coral-red);
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
@@ -561,7 +561,7 @@ body {
 .map-filters {
     background: white;
     padding: 1rem 2rem;
-    border-bottom: 1px solid var(--sand);
+    border-bottom: 1px solid var(--soft-pink);
     position: sticky;
     top: 70px;
     z-index: 50;
@@ -578,7 +578,7 @@ body {
 
 .filter-tab {
     background: white;
-    border: 1px solid var(--sand);
+    border: 1px solid var(--soft-pink);
     padding: 0.5rem 1rem;
     border-radius: 25px;
     cursor: pointer;
@@ -589,14 +589,14 @@ body {
 }
 
 .filter-tab:hover {
-    border-color: var(--ocean-blue);
-    background: var(--sand);
+    border-color: var(--magenta-pink);
+    background: var(--soft-pink);
 }
 
 .filter-tab.active {
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
-    border-color: var(--palm-green);
+    border-color: var(--coral-red);
 }
 
 /* Attractions Container */
@@ -615,12 +615,12 @@ body {
 
 .attractions-header h3 {
     font-size: 1.8rem;
-    color: var(--palm-green);
+    color: var(--coral-red);
     font-weight: 700;
 }
 
 .btn-view-all {
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -631,7 +631,7 @@ body {
 }
 
 .btn-view-all:hover {
-    background: var(--coral);
+    background: var(--rose-gold);
     transform: translateY(-2px);
 }
 
@@ -658,7 +658,7 @@ body {
 .attraction-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--palm-green);
+    border-color: var(--coral-red);
 }
 
 .attraction-image {
@@ -682,14 +682,14 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     backdrop-filter: blur(10px);
-    color: var(--palm-green);
+    color: var(--coral-red);
 }
 
 .free-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--coral);
+    background: var(--rose-gold);
     color: white;
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
@@ -738,7 +738,7 @@ body {
 /* How It Works */
 .how-it-works {
     padding: 5rem 2rem;
-    background: var(--sand);
+    background: var(--soft-pink);
 }
 
 .steps-grid {
@@ -763,7 +763,7 @@ body {
 .step-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--palm-green);
+    border-color: var(--coral-red);
 }
 
 .step-icon {
@@ -775,7 +775,7 @@ body {
     position: absolute;
     top: -15px;
     right: 20px;
-    background: var(--coral);
+    background: var(--rose-gold);
     color: white;
     width: 30px;
     height: 30px;
@@ -790,7 +790,7 @@ body {
 .step-card h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--palm-green);
+    color: var(--coral-red);
 }
 
 .step-card p {
@@ -800,7 +800,7 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
     padding: 3rem 2rem 1rem;
     margin-top: 2rem;
@@ -819,7 +819,7 @@ body {
     margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1.1rem;
-    color: var(--sand);
+    color: var(--soft-pink);
 }
 
 .footer-section p {
@@ -844,7 +844,7 @@ body {
 
 .footer-links a:hover {
     opacity: 1;
-    color: var(--sand);
+    color: var(--soft-pink);
 }
 
 .footer-bottom {
@@ -916,11 +916,11 @@ body {
 }
 
 .modal-close:hover {
-    background: var(--sand);
+    background: var(--soft-pink);
 }
 
 .modal h2 {
-    color: var(--palm-green);
+    color: var(--coral-red);
     margin-bottom: 2rem;
     font-weight: 700;
     font-size: 1.8rem;
@@ -942,7 +942,7 @@ body {
 .form-group select {
     width: 100%;
     padding: 1rem;
-    border: 2px solid var(--sand);
+    border: 2px solid var(--soft-pink);
     border-radius: 15px;
     font-size: 1rem;
     font-family: inherit;
@@ -952,13 +952,13 @@ body {
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--ocean-blue);
-    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+    border-color: var(--magenta-pink);
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
 }
 
 .btn-submit {
     width: 100%;
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
     border: none;
     padding: 1rem;
@@ -977,7 +977,7 @@ body {
 }
 
 .btn-submit:hover {
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
     transform: translateY(-2px);
 }
 
@@ -995,13 +995,13 @@ body {
 }
 
 .form-footer a {
-    color: var(--ocean-blue);
+    color: var(--magenta-pink);
     text-decoration: none;
     font-weight: 500;
 }
 
 .form-footer a:hover {
-    color: var(--coral);
+    color: var(--rose-gold);
 }
 
 /* Install Banner */
@@ -1010,7 +1010,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
     padding: 1rem;
     display: none;
@@ -1054,7 +1054,7 @@ body {
 }
 
 .btn-install {
-    background: var(--sand);
+    background: var(--soft-pink);
     color: var(--text-dark);
     border: none;
     padding: 0.75rem 1.5rem;
@@ -1066,7 +1066,7 @@ body {
 
 .btn-install:hover {
     transform: scale(1.05);
-    background: var(--coral);
+    background: var(--rose-gold);
     color: white;
 }
 
@@ -1104,7 +1104,7 @@ body {
     position: fixed;
     top: 100px;
     right: 2rem;
-    background: var(--coral);
+    background: var(--rose-gold);
     color: white;
     padding: 1rem 2rem;
     border-radius: 10px;
@@ -1116,7 +1116,7 @@ body {
 }
 
 .toast.error {
-    background: var(--coral);
+    background: var(--coral-red);
 }
 
 .toast.warning {
@@ -1128,7 +1128,7 @@ body {
 }
 
 .toast.info {
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
 }
 
 @keyframes slideInRight {
@@ -1148,7 +1148,7 @@ body {
 }
 
 .info-window-header {
-    background: linear-gradient(135deg, var(--palm-green), var(--ocean-blue));
+    background: linear-gradient(135deg, var(--coral-red), var(--magenta-pink));
     color: white;
     padding: 1rem;
     margin: -1rem -1rem 1rem -1rem;
@@ -1192,7 +1192,7 @@ body {
 }
 
 .info-window-free {
-    background: var(--coral);
+    background: var(--rose-gold);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
@@ -1205,13 +1205,13 @@ body {
     gap: 0.5rem;
     margin: 1rem -1rem -1rem -1rem;
     padding: 1rem;
-    background: var(--sand);
+    background: var(--soft-pink);
     justify-content: center;
 }
 
 .btn-info-action {
     flex: 1;
-    background: var(--palm-green);
+    background: var(--coral-red);
     color: white;
     border: none;
     padding: 0.5rem;
@@ -1223,7 +1223,7 @@ body {
 }
 
 .btn-info-action:hover {
-    background: var(--ocean-blue);
+    background: var(--magenta-pink);
 }
 
 /* Responsive Design */
