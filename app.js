@@ -1,5 +1,5 @@
 // app.js
-// Palm Beach Pass - Main Application Logic with Vibrant Tropical Colors
+// Palm Beach Pass - Main Application Logic with Red-Pink Sightseeing Pass Colors
 
 class PalmBeachPassApp {
     constructor() {
@@ -146,7 +146,7 @@ class PalmBeachPassApp {
                 regularPrice: 0,
                 coordinates: { lat: 26.7006, lng: -80.0364 },
                 image: '🛍️',
-                gradient: 'linear-gradient(135deg, #FFD700, #FF4757)',
+                gradient: 'linear-gradient(135deg, #FF4757, #E91E63)',
                 featured: true
             },
             {
@@ -157,7 +157,7 @@ class PalmBeachPassApp {
                 regularPrice: 18,
                 coordinates: { lat: 26.7138, lng: -80.0484 },
                 image: '🏛️',
-                gradient: 'linear-gradient(135deg, #2E8B57, #1E90FF)',
+                gradient: 'linear-gradient(135deg, #E91E63, #FF69B4)',
                 featured: true
             },
             {
@@ -168,7 +168,7 @@ class PalmBeachPassApp {
                 regularPrice: 24.95,
                 coordinates: { lat: 26.6502, lng: -80.6749 },
                 image: '🦁',
-                gradient: 'linear-gradient(135deg, #2E8B57, #FFD700)',
+                gradient: 'linear-gradient(135deg, #FF4757, #FFB6C1)',
                 featured: true
             },
             {
@@ -179,7 +179,7 @@ class PalmBeachPassApp {
                 regularPrice: 19.95,
                 coordinates: { lat: 26.6900, lng: -80.0725 },
                 image: '🔬',
-                gradient: 'linear-gradient(135deg, #1E90FF, #FF4757)',
+                gradient: 'linear-gradient(135deg, #E91E63, #FF4757)',
                 featured: true
             },
             {
@@ -190,7 +190,7 @@ class PalmBeachPassApp {
                 regularPrice: 15,
                 coordinates: { lat: 26.7755, lng: -80.0450 },
                 image: '🏝️',
-                gradient: 'linear-gradient(135deg, #1E90FF, #2E8B57)',
+                gradient: 'linear-gradient(135deg, #FF69B4, #FFB6C1)',
                 featured: false
             },
             {
@@ -201,7 +201,7 @@ class PalmBeachPassApp {
                 regularPrice: 50,
                 coordinates: { lat: 26.7173, lng: -80.0395 },
                 image: '🏨',
-                gradient: 'linear-gradient(135deg, #FFD700, #FF4757)',
+                gradient: 'linear-gradient(135deg, #FF4757, #E91E63)',
                 featured: true
             },
             {
@@ -212,7 +212,7 @@ class PalmBeachPassApp {
                 regularPrice: 18,
                 coordinates: { lat: 26.7000, lng: -80.0500 },
                 image: '🎨',
-                gradient: 'linear-gradient(135deg, #2E8B57, #1E90FF)',
+                gradient: 'linear-gradient(135deg, #E91E63, #FF69B4)',
                 featured: false
             },
             {
@@ -223,7 +223,7 @@ class PalmBeachPassApp {
                 regularPrice: 39.95,
                 coordinates: { lat: 26.6700, lng: -80.1800 },
                 image: '🦁',
-                gradient: 'linear-gradient(135deg, #FFD700, #2E8B57)',
+                gradient: 'linear-gradient(135deg, #FF4757, #FFB6C1)',
                 featured: true
             },
             {
@@ -234,7 +234,7 @@ class PalmBeachPassApp {
                 regularPrice: 10,
                 coordinates: { lat: 26.6400, lng: -80.0900 },
                 image: '🌺',
-                gradient: 'linear-gradient(135deg, #2E8B57, #FFD700)',
+                gradient: 'linear-gradient(135deg, #FFB6C1, #FF69B4)',
                 featured: false
             },
             {
@@ -245,7 +245,7 @@ class PalmBeachPassApp {
                 regularPrice: 34.99,
                 coordinates: { lat: 26.6300, lng: -80.1200 },
                 image: '💦',
-                gradient: 'linear-gradient(135deg, #1E90FF, #FFD700)',
+                gradient: 'linear-gradient(135deg, #E91E63, #FF4757)',
                 featured: true
             }
         ];
@@ -474,17 +474,17 @@ class PalmBeachPassApp {
             {
                 featureType: 'water',
                 elementType: 'geometry',
-                stylers: [{ color: '#1E90FF' }]
+                stylers: [{ color: '#E91E63' }]
             },
             {
                 featureType: 'landscape',
                 elementType: 'geometry',
-                stylers: [{ color: '#FFD700' }]
+                stylers: [{ color: '#FFB6C1' }]
             },
             {
                 featureType: 'poi.park',
                 elementType: 'geometry',
-                stylers: [{ color: '#2E8B57' }]
+                stylers: [{ color: '#FF69B4' }]
             }
         ];
     }
@@ -541,15 +541,15 @@ class PalmBeachPassApp {
 
     createCustomMarker(category) {
         const colors = {
-            shopping: '#FFD700',
-            culture: '#2E8B57',
-            family: '#1E90FF',
-            nature: '#2E8B57',
+            shopping: '#FF4757',
+            culture: '#E91E63',
+            family: '#FF69B4',
+            nature: '#FFB6C1',
             dining: '#FF4757',
-            adventure: '#1E90FF'
+            adventure: '#E91E63'
         };
 
-        const color = colors[category] || '#2E8B57';
+        const color = colors[category] || '#FF4757';
         const icon = this.getCategoryIcon(category);
         
         // Return simple object for mock implementation
@@ -811,7 +811,7 @@ class PalmBeachPassApp {
         }
 
         const item = this.state.cart[0];
-        this.showToast(`Cart: ${item.name} - $${item.adultPrice}`, 'info');
+        this.showToast(`Cart: ${item.name} - ${item.adultPrice}`, 'info');
         
         setTimeout(() => {
             window.location.href = 'checkout.html';
@@ -823,7 +823,7 @@ class PalmBeachPassApp {
         const attraction = this.state.attractions.find(a => a.id === attractionId);
         if (!attraction) return;
 
-        const priceText = attraction.regularPrice > 0 ? `Regular: $${attraction.regularPrice}` : '';
+        const priceText = attraction.regularPrice > 0 ? `Regular: ${attraction.regularPrice}` : '';
         const message = `🎫 ${attraction.name} | ${priceText} | FREE with Palm Beach Pass! | ${attraction.description}`;
         this.showToast(message, 'info');
     }
