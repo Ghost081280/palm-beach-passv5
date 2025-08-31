@@ -20,7 +20,7 @@
         "sunday": "12:00 PM - 5:00 PM"
       },
       "image": "🛍️",
-      "gradient": "linear-gradient(135deg, #FFD700, #FF4757)",
+      "gradient": "linear-gradient(135deg, #FF4757, #E91E63)",
       "featured": true,
       "rating": 4.6,
       "reviewCount": 2847,
@@ -52,7 +52,7 @@
         "sunday": "12:00 PM - 5:00 PM"
       },
       "image": "🏛️",
-      "gradient": "linear-gradient(135deg, #2E8B57, #1E90FF)",
+      "gradient": "linear-gradient(135deg, #E91E63, #FF69B4)",
       "featured": true,
       "rating": 4.8,
       "reviewCount": 1923,
@@ -84,7 +84,7 @@
         "sunday": "9:00 AM - 5:00 PM"
       },
       "image": "🦁",
-      "gradient": "linear-gradient(135deg, #2E8B57, #FFD700)",
+      "gradient": "linear-gradient(135deg, #FF4757, #FFB6C1)",
       "featured": true,
       "rating": 4.5,
       "reviewCount": 3456,
@@ -116,7 +116,7 @@
         "sunday": "12:00 PM - 5:00 PM"
       },
       "image": "🔬",
-      "gradient": "linear-gradient(135deg, #1E90FF, #FF4757)",
+      "gradient": "linear-gradient(135deg, #E91E63, #FF4757)",
       "featured": true,
       "rating": 4.7,
       "reviewCount": 2134,
@@ -148,7 +148,7 @@
         "sunday": "8:00 AM - Sunset"
       },
       "image": "🏝️",
-      "gradient": "linear-gradient(135deg, #1E90FF, #2E8B57)",
+      "gradient": "linear-gradient(135deg, #FF69B4, #FFB6C1)",
       "featured": false,
       "rating": 4.4,
       "reviewCount": 987,
@@ -180,7 +180,7 @@
         "sunday": "24 hours"
       },
       "image": "🏨",
-      "gradient": "linear-gradient(135deg, #FFD700, #FF4757)",
+      "gradient": "linear-gradient(135deg, #FF4757, #E91E63)",
       "featured": true,
       "rating": 4.9,
       "reviewCount": 4567,
@@ -212,7 +212,7 @@
         "sunday": "11:00 AM - 5:00 PM"
       },
       "image": "🎨",
-      "gradient": "linear-gradient(135deg, #2E8B57, #1E90FF)",
+      "gradient": "linear-gradient(135deg, #E91E63, #FF69B4)",
       "featured": false,
       "rating": 4.6,
       "reviewCount": 1654,
@@ -244,7 +244,7 @@
         "sunday": "9:30 AM - 5:30 PM"
       },
       "image": "🦁",
-      "gradient": "linear-gradient(135deg, #FFD700, #2E8B57)",
+      "gradient": "linear-gradient(135deg, #FF4757, #FFB6C1)",
       "featured": true,
       "rating": 4.8,
       "reviewCount": 5432,
@@ -276,7 +276,7 @@
         "sunday": "8:00 AM - 5:00 PM"
       },
       "image": "🌺",
-      "gradient": "linear-gradient(135deg, #2E8B57, #FFD700)",
+      "gradient": "linear-gradient(135deg, #FFB6C1, #FF69B4)",
       "featured": false,
       "rating": 4.3,
       "reviewCount": 876,
@@ -308,7 +308,7 @@
         "sunday": "10:00 AM - 6:00 PM"
       },
       "image": "💦",
-      "gradient": "linear-gradient(135deg, #1E90FF, #FFD700)",
+      "gradient": "linear-gradient(135deg, #E91E63, #FF4757)",
       "featured": true,
       "rating": 4.5,
       "reviewCount": 3210,
